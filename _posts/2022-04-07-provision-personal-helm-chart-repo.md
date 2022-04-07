@@ -49,7 +49,7 @@ There will also be a new **GitHub Actions Workflow** named `pages-build-deploy` 
 
 ![Workflows](/assets/images/github-actions-workflows.png "GitHub Actions Workflows")
 
-Usually, this workflow only runs after the `index.yaml` file for our helm repo is updated in the `gh-pages` branch for us by the Chart Releaser tool, but in order to add some instructions to our helm repo's public endpoint (in the event a user visits it with a browser), we can add a `README.md` to the root of the `gh-pages` branch and push it (you could alternatively write an `index.html` if you prefer working with HTML over markdown), this should trigger your `pages-build-deploy` workflow and when it completes you can browse to your site and see your instructions.
+Usually, this workflow only runs after the `index.yaml` file for our helm repo is updated in the `gh-pages` branch for us by the Chart Releaser tool, but to add some instructions to our helm repo's public endpoint (in the event a user visits it with a browser), we can add a `README.md` to the root of the `gh-pages` branch and push it (you could alternatively write an `index.html` if you prefer working with HTML over markdown), this should trigger your `pages-build-deploy` workflow and when it completes you can browse to your site and see your instructions.
 
 Example [`README.md`](https://github.com/gerkElznik/helm-charts/blob/gh-pages/README.md) will result in this instructional page [https://gerkelznik.github.io/helm-charts](https://gerkelznik.github.io/helm-charts):
 
@@ -178,7 +178,7 @@ When the workflow completes you should see the image added to your Packages:
 
 ![Packages](/assets/images/github-package-new.png "Packages")
 
-When you click on the new package (see the red arrow above), you'll be able to see a version tag created (in this case `0.1.0`) for the image that corresponds to the release we cut.  Unfortunately I found that the package (image) was published as "Private" meaning an anonymous user would be unable to pull this image, and that's not what I want for the applications my personal helm charts will package up since I desire being able to share them freely, and at the time of this writing I was unable to find a way to automate changing it to "Public" -- however the package's visibility can be manually changed by clicking on "Package settings" as the red arrow below shows:
+When you click on the new package (see the red arrow above), you'll be able to see a version tag created (in this case `0.1.0`) for the image that corresponds to the release we cut.  Unfortunately, I found that the package (image) was published as "Private" meaning an anonymous user would be unable to pull this image, and that's not what I want for the applications my personal helm charts will package up since I desire to be able to share them freely, and at the time of this writing I was unable to find a way to automate changing it to "Public" -- however, the package's visibility can be manually changed by clicking on "Package settings" as the red arrow below shows:
 
 ![Package Settings](/assets/images/github-package-settings.png "Package Settings")
 
@@ -253,7 +253,7 @@ Now just push your changes to the `main` branch and the `Release Charts` followe
 
 ![Release Helm Charts](/assets/images/github-actions-chart-release.png "Release Charts")
 
-Once these complete you should be able to see the new helm chart release:
+Once these are complete you should be able to see the new helm chart release:
 
 ![Releases](/assets/images/github-releases.png "Releases")
 
@@ -316,7 +316,7 @@ Voila, we now verified that an end-user can install our new helm chart and we ha
 
 ![MacGruber Pod Running](/assets/images/helm-chart-macgruber-pod.png "MacGruber Pod Running")
 
-Just for fun we can port forward local port 8080 to the Service our helm chart created (which listens on port 80):
+Just for fun, we can port forward local port 8080 to the Service our helm chart created (which listens on port 80):
 ```console
 kubectl port-forward service/macgruber 8080:80
 ```
@@ -333,4 +333,4 @@ In this article, we saw there are several steps necessary to get to the point wh
 
 For my next post, I’ll continue where we left off in this article and I'll show how we can add another GitHub Actions Workflow to our `helm-chart` repo to **lint** and **test** pull requests for our charts using an action called [`@helm/chart-testing-action`](https://github.com/helm/chart-testing-action).  This will spin up an ephemeral [`kind`](https://kind.sigs.k8s.io) Kubernetes cluster and use a [`Chart Testing tool`](https://github.com/helm/chart-testing) to automate testing our helm charts.  Stay tuned!
 
-If you enjoyed this post I'd [appreciate some claps](https://medium.com/@gerkElznik) for it over on Medium!
+If you enjoyed this post I'd [appreciate some claps](https://medium.com/@gerkElznik/provision-a-free-personal-helm-chart-repo-using-github-583b668d9ba4) for it over on Medium!
