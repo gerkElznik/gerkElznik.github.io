@@ -31,7 +31,7 @@ I created a new `helm-charts` repo in my web browser and cloned it to the machin
 git clone https://github.com/gerkElznik/helm-charts.git && cd helm-charts
 ```
 
-## Step 2: Set up GitHub Pages
+## Step 2: Set up GitHub Pages for a repo endpoint
 Create a new branch named `gh-pages` (it will contain separate content and lineage than the `main` branch and they're never intended to be merged):
 ```console
 git checkout --orphan gh-pages
@@ -44,7 +44,7 @@ After creating the `gh-pages` branch you can see GitHub Pages is automatically e
 
 ![Pages](/assets/images/settings-github-pages.png "Settings >> GitHub Pages")
 
-## Step 3: Bring it all together with Workflows in GitHub Actions
+## Step 3: Automate it all with Workflows in GitHub Actions
 There will also be a new **GitHub Actions Workflow** named `pages-build-deploy` created automatically after you created the `gh-pages` branch:
 
 ![Workflows](/assets/images/github-actions-workflows.png "GitHub Actions Workflows")
@@ -193,7 +193,7 @@ Now your image should be public to the world and any anonymous user can pull it 
 docker pull ghcr.io/gerkelznik/macgruber-app:0.1.0
 ```
 
-## Step 5: Create a helm chart
+## Step 5: Publish a helm chart
 Be sure you have [helm installed](https://helm.sh/docs/intro/quickstart/#install-helm), I'm using the following version:
 ```console
 $ helm version
