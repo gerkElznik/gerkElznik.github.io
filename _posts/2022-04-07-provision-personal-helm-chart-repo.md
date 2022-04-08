@@ -329,7 +329,7 @@ And then see our *awesome* new app in action from a browser at [`http://localhos
 ## In Conclusion
 The GitHub ecosystem provides a nice free option for hosting helm chart repos, in addition, it also provides automated workflows managed with pipeline-as-code, docker image repos, and of course application code repos.
 
-In this article, we saw there are several steps necessary to get to the point where you have a shareable public helm chart.  GitHub has features that check the box for all of them.  I’m interested to hear your feedback on experiences you’ve had with various other tools that accomplish the same.
+In this article, we saw there are several steps necessary to get to the point where you have a shareable public helm chart.  I found that GitHub has free features checking all the boxes to get you there.  I’m interested to hear your feedback on experiences you’ve had with various other tools that accomplish the same.
 
 For my next post, I’ll continue where we left off in this article and I'll show how we can add another GitHub Actions Workflow to our `helm-chart` repo to **lint** and **test** pull requests for our charts using an action called [`@helm/chart-testing-action`](https://github.com/helm/chart-testing-action).  This will spin up an ephemeral [`kind`](https://kind.sigs.k8s.io) Kubernetes cluster and use a [`Chart Testing tool`](https://github.com/helm/chart-testing) to automate testing our helm charts.  Stay tuned!
 
