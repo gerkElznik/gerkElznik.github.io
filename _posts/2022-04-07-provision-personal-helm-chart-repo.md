@@ -20,7 +20,7 @@ Wrong.  Thanks to the features GitHub provides us **free of charge** we can host
 - [GitHub Pages](https://pages.github.com) will provide us with a public endpoint and an HTTP server for our chart repo.
 - [GitHub Actions](https://docs.github.com/en/actions) will provide us with pipelines for our automated workflows.
 - [Chart Releaser](https://helm.sh/docs/howto/chart_releaser_action) is an open source [tool](https://github.com/helm/chart-releaser) that will make this all a breeze (and inspired this article).
-- [GitHub Releases](https://github.com/helm/chart-releaser) will store our packaged helm chart releases (versions).
+- [GitHub Releases](https://docs.github.com/en/enterprise-cloud@latest/repositories/releasing-projects-on-github/about-releases) will store our packaged helm chart releases (versions).
 - [GitHub Container Registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry) will store our custom docker images (versions).
 
 ## Step 1: Create a GitHub Repo to house everything
