@@ -42,7 +42,7 @@ docker pull gcr.io/distroless/nodejs-debian11@sha256:2b0fe69900014a74bc85fd4588e
 
 ## Compare the two
 
-Now that we've pulled the images we want to compare, we can use [Trivy](https://github.com/aquasecurity/trivy) to scan the images for CVEs.  Install trivy for your operating system, here is the version I'm for this article:
+Now that we've pulled the images we want to compare, we can use [Trivy](https://github.com/aquasecurity/trivy) to scan the images for CVEs.  Install trivy for your operating system, here is the version I'm using for this article:
 
 ```console
 $ trivy --version
