@@ -26,7 +26,7 @@ I found the tutorials were geared almost perfectly for me and the skill level I 
 
 As a bonus, the Odyssey platform even officially recognizes your new skill with a certificate you can share with the world:
 
-![Apollo Graph Developer - Associate Certificate](https://pbs.twimg.com/card_img/1516281717648244738/8Gc3CLez?format=jpg&name=medium "Apollo Graph Developer - Associate Certificate")
+![Apollo Graph Developer - Associate Certificate](/assets/images/apollo-certification.jpg "Apollo Graph Developer - Associate Certificate")
 
 My hat's off to the people at Apollo who created this very nice learning platform -- and their site says more advanced certifications will be coming soon -- I'm looking forward to it!
 
