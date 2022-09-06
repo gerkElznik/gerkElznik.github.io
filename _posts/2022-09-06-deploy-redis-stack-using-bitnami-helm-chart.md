@@ -209,4 +209,4 @@ Now we can run the first three commands shown below that OSS Redis would be capa
 ## Conclusion
 The Bitnami Helm chart for Redis has a lot of other configuration options that we didn't cover in this article that could be used to create a more reliable production-grade deployment of Redis Stack -- this article demonstrates how you could get started if you want to proceed down this path.
 
-If you enjoyed this post I’d [appreciate some claps for it over on Medium](https://medium.com/@gerkElznik/reduce-cves-in-your-containerized-node-js-app-using-a-distroless-base-image-6caca3505a1b) where you can [follow me](https://medium.com/@gerkElznik) for more of the same.
+If you enjoyed this post I’d [appreciate some claps for it over on Medium](https://medium.com/@gerkElznik/deploy-redis-stack-using-bitnamis-helm-chart-d8339453352c){:target="_blank"} where you can [follow me](https://medium.com/@gerkElznik){:target="_blank"} for more of the same.
