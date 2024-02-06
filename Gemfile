@@ -12,7 +12,7 @@ source "https://rubygems.org"
 # gem "minima", "~> 2.5"
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
-gem "github-pages", "~> 225", group: :jekyll_plugins
+gem "github-pages", "~> 228", group: :jekyll_plugins
 gem "jekyll-include-cache", "~> 0.2.1", group: :jekyll_plugins
 # If you have any plugins, put them here!
 # group :jekyll_plugins do
@@ -33,4 +33,4 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 # do not have a Java counterpart.
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
-gem "webrick", "~> 1.7"
+gem "webrick", "~> 1.8", ">= 1.8.1"
