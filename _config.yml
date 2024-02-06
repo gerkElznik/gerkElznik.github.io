@@ -128,7 +128,7 @@ author:
     #   icon: "fas fa-fw fa-link"
     #   url: "https://gerkelznik.github.io"
     - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
+      icon: "fab fa-fw fa-square-x-twitter"
       url: "https://twitter.com/gerkElznik"
     - label: "Reddit"
       icon: "fab fa-fw fa-reddit"
@@ -139,7 +139,7 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/gerkElznik"
-    - label: "gerkElznik"
+    - label: "Medium"
       icon: "fab fa-medium"
       url: "https://medium.com/@gerkElznik"
     # - label: "Instagram"
@@ -150,7 +150,7 @@ author:
 footer:
   links:
     - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
+      icon: "fab fa-fw fa-square-x-twitter"
       url: "https://twitter.com/gerkElznik"
     - label: "Reddit"
       icon: "fab fa-fw fa-reddit"
