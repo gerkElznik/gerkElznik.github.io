@@ -47,6 +47,8 @@ GEM
       logger
     faraday-net_http (3.4.4)
       net-http (~> 0.5)
+    faraday-retry (2.4.0)
+      faraday (~> 2.0)
     ffi (1.17.4-arm64-darwin)
     forwardable-extended (2.6.0)
     gemoji (4.1.0)
@@ -280,6 +282,7 @@ PLATFORMS
   arm64-darwin
 
 DEPENDENCIES
+  faraday-retry (~> 2.4)
   github-pages (~> 232)
   http_parser.rb (~> 0.6.0)
   jekyll-include-cache (~> 0.2.1)

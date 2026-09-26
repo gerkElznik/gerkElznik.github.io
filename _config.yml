@@ -125,9 +125,9 @@ author:
     # - label: "Website"
     #   icon: "fas fa-fw fa-link"
     #   url: "https://gerkelznik.github.io"
-    - label: "Twitter"
+    - label: "X"
       icon: "fab fa-fw fa-square-x-twitter"
-      url: "https://twitter.com/gerkElznik"
+      url: "https://x.com/gerkElznik"
     - label: "Reddit"
       icon: "fab fa-fw fa-reddit"
       url: "https://www.reddit.com/user/gerkElznik"
@@ -147,9 +147,9 @@ author:
 # Site Footer
 footer:
   links:
-    - label: "Twitter"
+    - label: "X"
       icon: "fab fa-fw fa-square-x-twitter"
-      url: "https://twitter.com/gerkElznik"
+      url: "https://x.com/gerkElznik"
     - label: "Reddit"
       icon: "fab fa-fw fa-reddit"
       url: "https://www.reddit.com/user/gerkElznik"
@@ -172,6 +172,9 @@ footer:
     #   icon: "fab fa-fw fa-instagram"
     #   url:
 
+
+after_footer_scripts:
+  - /assets/js/site.js
 
 # Reading Files
 include:

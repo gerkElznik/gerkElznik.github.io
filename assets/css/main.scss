@@ -5,13 +5,34 @@ search: false
 
 @charset "utf-8";
 
-// Preserve the site's X/Twitter color using the theme's current variable name.
-$x-color: #1e3050;
-
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
 // Site-specific styling; the remaining styles come from the remote theme.
+html {
+  --masthead-height: 4.5rem;
+  scroll-padding-top: calc(var(--masthead-height) + 1rem);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+.masthead {
+  position: sticky;
+  top: 0;
+  background-color: $background-color;
+}
+
+@include breakpoint($large) {
+  .sidebar.sticky {
+    top: calc(var(--masthead-height) + 1em);
+    max-height: calc(100vh - var(--masthead-height) - 2em);
+  }
+}
+
 .page__subtitle {
   font-size: $type-size-5;
   color: $muted-text-color;
