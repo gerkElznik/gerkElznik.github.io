@@ -1,5 +1,6 @@
 [tools]
-ruby = "3.4.5"
+# github-pages 232 requires commonmarker < 1, which does not support Ruby 4.
+ruby = "3.4.11"
 
 [tasks.setup]
 description = "Install missing gems from Gemfile.lock"

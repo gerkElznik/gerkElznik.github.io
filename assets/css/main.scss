@@ -1,13 +1,34 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
+search: false
 ---
 
 @charset "utf-8";
 
+// Preserve the site's X/Twitter color using the theme's current variable name.
+$x-color: #1e3050;
+
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-.page__subtitle{
+// Site-specific styling; the remaining styles come from the remote theme.
+.page__subtitle {
   font-size: $type-size-5;
   color: $muted-text-color;
+}
+
+.author__avatar img {
+  max-width: 200px;
+}
+
+.btn--reddit {
+  @include yiq-contrasted($reddit-color);
+
+  &:visited {
+    @include yiq-contrasted($reddit-color);
+  }
+
+  &:hover {
+    @include yiq-contrasted(mix(#000, $reddit-color, 20%));
+  }
 }

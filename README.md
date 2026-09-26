@@ -42,11 +42,22 @@ mise run build --future
 
 ## Dependency updates
 
+The site uses GitHub Pages' built-in Jekyll build. Its latest `github-pages`
+bundle (232) pins Jekyll to 3.10.0 and requires a CommonMarker release that does
+not support Ruby 4. Ruby is therefore pinned to the latest compatible 3.4 release.
+
 Change the Ruby version in `mise.toml`, then run `mise install` and
 `mise run check`. Keep gem dependencies in `Gemfile` and commit changes to
 `Gemfile.lock` alongside dependency updates. For example:
 
 ```bash
-mise exec -- bundle update github-pages
+mise exec -- bundle update --all
 mise run check
+mise exec -- bundle outdated --strict
 ```
+
+Minimal Mistakes is pinned with `remote_theme` in `_config.yml`. Templates,
+styles, and JavaScript come from that release; local overrides retain the
+custom footer, favicons, share buttons, UI text, and styles in
+`assets/css/main.scss`. When upgrading the theme, review those overrides
+against the new release. Font Awesome is pinned in `_includes/head.html`.
