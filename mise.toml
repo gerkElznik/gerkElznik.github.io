@@ -1,0 +1,30 @@
+[tools]
+ruby = "3.4.5"
+
+[tasks.setup]
+description = "Install missing gems from Gemfile.lock"
+run = "bundle check || bundle install"
+
+[tasks.dev]
+description = "Serve the site locally with live reload"
+alias = "serve"
+depends = ["setup"]
+env = { JEKYLL_ENV = "development" }
+run = "bundle exec jekyll serve --livereload"
+
+[tasks.build]
+description = "Build the production site into _site"
+depends = ["setup"]
+env = { JEKYLL_ENV = "production" }
+run = "bundle exec jekyll build"
+
+[tasks.check]
+description = "Build the production site and run Jekyll diagnostics"
+depends = ["build"]
+env = { JEKYLL_ENV = "production" }
+run = "bundle exec jekyll doctor"
+
+[tasks.clean]
+description = "Remove the generated site and Jekyll caches"
+depends = ["setup"]
+run = "bundle exec jekyll clean"

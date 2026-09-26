@@ -198,6 +198,10 @@ exclude:
   - gulpfile.js
   - LICENSE
   - log
+  - mise.toml
+  - mise.lock
+  - mise.local.toml
+  - mise.local.lock
   - node_modules
   - package.json
   - package-lock.json
